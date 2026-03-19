@@ -98,3 +98,30 @@ store all prompts used for this project in a file in the repository
 ## 8) User Prompt
 
 Start implementation
+
+## 9) User Prompt
+
+continue
+
+## 10) Assistant Clarification Prompt
+
+Git status shows an untracked `.vscode/settings.json`. How should it be handled: (1) commit it, (2) delete it, or (3) keep locally but add `.vscode/` to `.gitignore`?
+
+Selected answer:
+- 3 — keep locally and add `.vscode/` to `.gitignore`.
+
+## 11) User Prompt
+
+continue
+
+## 12) User Prompt
+
+update to godot 4.6
+
+## 13) User Prompt
+
+add a README.md file to the repository with includes a short intro explaining that this was a fun expiriment to use CoPilot to make a playable game using Godot. Include a How to Play section with instructions to download Godot, import the Connect Four project, and play the game
+
+## 14) User Prompt
+
+Enhance the README.md with Godot download link, add a link to project-prompts.md explaining it contains all prompts used to make this project, and update project-prompts.md so it contains all prompts used so far. Then stage and commit all changes. Finally push to github.com.
