@@ -1,0 +1,121 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/setup_screen.gd" id="1"]
+
+[node name="SetupScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.105882, 0.2, 1)
+
+[node name="ContentMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 42
+
+[node name="Content" type="VBoxContainer" parent="ContentMargin"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="ContentMargin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Connect Four"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="ContentMargin/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Choose each player type, then start the match."
+horizontal_alignment = 1
+
+[node name="PlayersRow" type="HBoxContainer" parent="ContentMargin/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="Player1Card" type="PanelContainer" parent="ContentMargin/Content/PlayersRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardBody" type="VBoxContainer" parent="ContentMargin/Content/PlayersRow/Player1Card"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player1Card/CardBody"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="TypeLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player1Card/CardBody"]
+layout_mode = 2
+text = "Type"
+
+[node name="TypeOption" type="OptionButton" parent="ContentMargin/Content/PlayersRow/Player1Card/CardBody"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DifficultyLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player1Card/CardBody"]
+layout_mode = 2
+text = "Difficulty"
+
+[node name="DifficultyOption" type="OptionButton" parent="ContentMargin/Content/PlayersRow/Player1Card/CardBody"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player2Card" type="PanelContainer" parent="ContentMargin/Content/PlayersRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardBody" type="VBoxContainer" parent="ContentMargin/Content/PlayersRow/Player2Card"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HeaderLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player2Card/CardBody"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="TypeLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player2Card/CardBody"]
+layout_mode = 2
+text = "Type"
+
+[node name="TypeOption" type="OptionButton" parent="ContentMargin/Content/PlayersRow/Player2Card/CardBody"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DifficultyLabel" type="Label" parent="ContentMargin/Content/PlayersRow/Player2Card/CardBody"]
+layout_mode = 2
+text = "Difficulty"
+
+[node name="DifficultyOption" type="OptionButton" parent="ContentMargin/Content/PlayersRow/Player2Card/CardBody"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StartButton" type="Button" parent="ContentMargin/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 56)
+theme_override_font_sizes/font_size = 24
+text = "Start Match"
